@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="administrar_productos.php" method="POST">
+        <h1>Nombre Producto</h1>
+        <input type="text" placeholder="nombre producto" name="nom_product" maxlength="20" required>
+        <h1>Descripción Producto</h1> 
+        <input type="text" placeholder="descripcion producto" name="desc_product" maxlength="256" required size="80">
+        <h1>Precio</h1>
+        <input type="text" placeholder="precio €" name="precio_product" maxlength="3" required>
+        <input type="submit" name="enviar" value="enviar">
+    </form>
+
+    <h1>Productos actuales</h1>
+
+</body>
+</html>
