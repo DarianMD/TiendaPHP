@@ -1,125 +1,17 @@
-@font-face{
-    font-family: titulo;
-    src: url("/TiendaPHP/styles/assets/fonts/Romelio.ttf");
-}
-
-html {
-    scroll-behavior: smooth;
-  }
-  
-  * {
+body{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background: rgb(38,38,38);
-background: radial-gradient(circle, rgba(38,38,38,1) 0%, rgba(51,51,51,1) 45%, rgba(0,0,0,1) 96%);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    height: 100%;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
-  
-  body:not(.user-is-tabbing) button:focus,
-  body:not(.user-is-tabbing) input:focus,
-  body:not(.user-is-tabbing) select:focus,
-  body:not(.user-is-tabbing) textarea:focus {
-    outline: none;
-  }
-  
- 
- 
-  h1 {
-    margin-top: 50px;
-    color: white;
-    font-family: titulo;
-    font-size: 35px;
-    font-weight: 800;
-  }
-  
-
-  #titulo{
-    font-family: titulo;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 
-  .flex-container {
-    width: 100vw;
-  
-    margin-top: 60px;
-  
-    display: flex;
+.main-carousel{
     justify-content: center;
+}
+.carousel-cell {
+    width: 100%; /* full width */
+    height: 200px; /* height of carousel */
+    margin-right: 10px;
     align-items: center;
-  }
-  
-  .content-container {
-    width: 500px;
-    height: 350px;
-  }
-  
-  .form-container {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 350px;
-    margin-top: 5px;
-    padding-top: 20px;
-    border-radius: 9vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: #131313;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199);
-  }
-  
-
-  .selecion{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-
   }
-  .subtitle {
-    font-size: 2em;
-    font-family: titulo;
-    color: rgba(177, 177, 177, 0.3);
-
-  }
-  
-  #login :hover {
-    font-size: 2em;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    opacity: 0.8;
-  }
-
-  #register :hover{
-    font-size: 2em;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    opacity: 0.8;
-  }
-
