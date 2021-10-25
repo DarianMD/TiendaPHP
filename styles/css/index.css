@@ -3,8 +3,15 @@ body{
 }
 
 
-.main-carousel{
+.productos{
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.main-carousel{
+    width: 500px;
+  
 }
 .carousel-cell {
     width: 100%; /* full width */
@@ -14,4 +21,9 @@ body{
     justify-content: center;
     display: grid;
     flex-wrap: wrap;
+  }
+
+  .flickity-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px #19F;
   }
