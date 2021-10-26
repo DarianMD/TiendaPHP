@@ -28,7 +28,7 @@
             echo "<div class='carousel-cell'>
             <h1>".$row["nom_product"]."</h1>
             <p>".$row["desc_product"]."</p>
-            <p>".$row["precio"]."</p>
+            <p>".$row["precio"]." €</p>
             <a href='logica.php?id=".$row["id"]."'>Comprar</a>
             <br>
             </div>";
