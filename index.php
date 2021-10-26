@@ -1,7 +1,7 @@
 <?php
   include ('/controllers/db.php');
-  $producto="SELECT * from producto";
-  $result = $conexion->query($producto);
+  include ('menu.php');
+  include ('producto.php');
 
 
 ?>
@@ -19,53 +19,7 @@
 <body>
 
 
-
-
-<nav class="navigation-wrapper">
-  <ul class="nav-list">
-    <li class="nav-item">
-      <a href="#/"><em>Home</em></a>
-    </li>
-    
-    <li class="nav-item">
-      <?php
-        if(session_id() == ''){
-          echo "<a href='login.php'><em>Login</em></a>";
-
-        }
-       else{
-         echo "Usuario X";
-         echo "<br>";
-         echo "<a href='logout.php'><em>Logout</em></a>";
-
-       }
-      
-      ?>
-    </li>
- 
-  </ul>
-</nav>
-
-  <div class="productos">
-  <div class="main-carousel" data-flickity='{ "cellAlign": "left","freeScroll": true ,"wrapAround": true, "contain": true, "autoPlay": 2500,"pauseAutoPlayOnHover": false }'>
-      <?php 
-        
-         if($result->num_rows > 0){
-          while ($row = $result->fetch_assoc()){
-            echo "<div class='carousel-cell'>
-            <h1>".$row["nom_product"]."</h1>
-            <p>".$row["desc_product"]."</p>
-            <p>".$row["precio"]."</p>
-            <a href='logica.php?id=".$row["id"]."'>Comprar</a>
-            <br>
-            </div>";
-            
-          }
-        } 
-     ?>
-    </div>
   
-  </div>
     
 
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">

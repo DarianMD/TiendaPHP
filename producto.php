@@ -1,20 +1,11 @@
 <?php
-include ('/controllers/db.php');
-include ('/menu.php');
+  include ('/controllers/db.php');
+  $producto="SELECT * from producto";
+  $result = $conexion->query($producto);
 
-
-$id = $_GET['id'];
-$producto="SELECT * from producto WHERE id = $id";
-$result = $conexion->query($producto);
-
-
-session_start();
-
-if(session_id() == ''){
-    header("Location:login.php");
-}
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,14 +13,13 @@ if(session_id() == ''){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Index</title>
+    <link rel="stylesheet" href="./styles/css/index.css">
 </head>
 <body>
 
-    <h1>Producto</h1>
 
-
-    <div class="productos">
+  <div class="productos">
   <div class="main-carousel" data-flickity='{ "cellAlign": "left","freeScroll": true ,"wrapAround": true, "contain": true, "autoPlay": 2500,"pauseAutoPlayOnHover": false }'>
       <?php 
         
@@ -50,5 +40,8 @@ if(session_id() == ''){
   
   </div>
     
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </body>
 </html>
