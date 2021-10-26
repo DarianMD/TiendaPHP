@@ -1,5 +1,5 @@
 <?php
-  include ('/controllers/db.php');
+  include ('../controllers/db.php');
   $producto="SELECT * from producto";
   $result = $conexion->query($producto);
 
@@ -18,33 +18,20 @@
 </head>
 <body>
 
+    <h1>Panel administración</h1>
 
+    <form action="crud.php" method="post" class="crear">
+    <h1>Titulo Producto</h1>
+    <input type="text" placeholder="titulo" name="title">
+    <h1>Descripción</h1>
+    <input type="text" placeholder="titulo" name="desc">
+    <h1>Precio</h1>
+    <input type="text" placeholder="precio" name="precio">
 
+    <input type="submit" value="crear">
 
-<nav class="navigation-wrapper">
-  <ul class="nav-list">
-    <li class="nav-item">
-      <a href="#/"><em>Home</em></a>
-    </li>
-    
-    <li class="nav-item">
-      <?php
-        if(session_id() == ''){
-          echo "<a href='login.php'><em>Login</em></a>";
+    </form>
 
-        }
-       else{
-         echo "Usuario X";
-         echo "<br>";
-         echo "<a href='logout.php'><em>Logout</em></a>";
-
-       }
-      
-      ?>
-    </li>
- 
-  </ul>
-</nav>
 
   <div class="productos">
   <div class="main-carousel" data-flickity='{ "cellAlign": "left","freeScroll": true ,"wrapAround": true, "contain": true, "autoPlay": 2500,"pauseAutoPlayOnHover": false }'>
@@ -56,7 +43,8 @@
             <h1>".$row["nom_product"]."</h1>
             <p>".$row["desc_product"]."</p>
             <p>".$row["precio"]."</p>
-            <a href='logica.php?id=".$row["id"]."'>Comprar</a>
+            <a href='logica.php?id=".$row["id"]."'>Editar</a>
+            <a href='logica.php?id=".$row["id"]."'>Borrar</a>
             <br>
             </div>";
             
@@ -68,8 +56,7 @@
   </div>
     
 
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    
 
 </body>
 </html>
