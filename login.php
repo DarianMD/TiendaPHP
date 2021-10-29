@@ -11,13 +11,13 @@
   <div class="flex-container">
     <div class="content-container">
       <div class="form-container">
-        <form action="/action_page.php">
+        <form action="/controllers/contr_login.php">
           <h1>
             Login
           </h1>
           <br>
           <br>
-          <span class="subtitle">USERNAME:</span>
+          <span class="subtitle">USERNAME OR E-MAIL:</span>
           <br>
           <input type="text" name="username" value="">
           <br>

@@ -29,6 +29,8 @@ $id = '';
 $id = $id.randw();
 
 
+$rol = 'u';
+
 function randw($length=6){
     return substr(str_shuffle("qwertyuiopasdfghjklzxcvbnm"),0,$length);
 }
@@ -54,13 +56,13 @@ $result = $conexion->query($producto);
 
 $usuar_sel="select * from usuario where user=".$user;
 $result = $conexion->query($usuar_sel);
-if (mysql_num_rows($result)> 0){
+if (mysql_num_rows($result) > 0){
         echo "El usuario ya existe";
     }
 else{
     if($conexion){
 
-        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$passwd', '$email', sysdate(), sysdate(),'$id',null)";
+        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$passwd', '$email', sysdate(), sysdate(),'$id',null,'$rol')";
          $consulta=mysqli_query($conexion,$sql);
          
          echo "Registro realizado correctamente"; 
