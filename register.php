@@ -19,15 +19,15 @@
               <br>
               <span class="subtitle">Usuario:</span>
               <br>
-              <input type="text" name="username" placeholder="USERNAME" required maxlenght="30">
+              <input type="text" name="username" placeholder="USERNAME" required maxlength="20">
               <br>
               <span class="subtitle">Contraseña:</span>
               <br>
-              <input type="password" name="password" placeholder="PASSWORD" required maxlenght="20">
+              <input type="password" name="password" placeholder="PASSWORD" required  maxlength="20">
               <br>
               <span class="subtitle">Correo:</span>
               <br>
-              <input type="email" name="email" placeholder="E-MAIL" required maxlenght="20">
+              <input type="email" name="email" placeholder="E-MAIL" required  maxlength="35">
               <br>
               <label for="img" class="subtitle">Select image:</label>
               <input type="file" id="img" name="img" accept="image/*">
