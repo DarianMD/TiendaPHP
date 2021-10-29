@@ -1,0 +1,2 @@
+http://www.formacionwebonline.com/crear-sesiones-php-en-intranet/
+https://www.baulphp.com/niveles-de-usuarios-php-y-mysql-ejemplo-completo/
