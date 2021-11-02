@@ -3,6 +3,9 @@
   $producto="SELECT * from producto";
   $result = $conexion->query($producto);
 
+  $usuario="SELECT * from usuario";
+  $resultado = $conexion->query($usuario);
+
 
 ?>
 
@@ -37,6 +40,30 @@
   <div class="main-carousel" data-flickity='{ "cellAlign": "left","freeScroll": true ,"wrapAround": true, "contain": true, "autoPlay": 2500,"pauseAutoPlayOnHover": false }'>
       <?php 
         
+         if($resultado->num_rows > 0){
+          while ($row = $resultado->fetch_assoc()){
+            echo "<div class='carousel-cell'>
+            <h1>".$row["USER"]."</h1>
+            <p>".$row["PASSWD"]."</p>
+            <p>".$row["EMAIL"]."</p>
+            <p>".$row["rol"]."</p>
+            <a href='crud.php?id=".$row["ID"]."'>Editar</a>
+            <a href='logica.php?id=".$row["ID"]."'>Borrar</a>
+            <br>
+            </div>";
+            
+          }
+        } 
+     ?>
+    </div>
+  
+  </div>
+    
+
+  <div class="productos">
+  <div class="main-carousel" data-flickity='{ "cellAlign": "left","freeScroll": true ,"wrapAround": true, "contain": true, "autoPlay": 2500,"pauseAutoPlayOnHover": false }'>
+      <?php 
+        
          if($result->num_rows > 0){
           while ($row = $result->fetch_assoc()){
             echo "<div class='carousel-cell'>
@@ -54,7 +81,6 @@
     </div>
   
   </div>
-    
 
     
 
