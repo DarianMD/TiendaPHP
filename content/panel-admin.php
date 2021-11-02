@@ -43,7 +43,7 @@
             <h1>".$row["nom_product"]."</h1>
             <p>".$row["desc_product"]."</p>
             <p>".$row["precio"]."</p>
-            <a href='logica.php?id=".$row["id"]."'>Editar</a>
+            <a href='crud.php?id=".$row["id"]."'>Editar</a>
             <a href='logica.php?id=".$row["id"]."'>Borrar</a>
             <br>
             </div>";

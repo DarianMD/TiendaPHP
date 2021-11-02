@@ -14,6 +14,14 @@ if(session_id() == ''){
     header("Location:login.php");
 }
 
+
+if(isset($_POST['boton1'])){
+  $sql="INSERT INTO `daw2`.`producto` VALUES (null,'$nombre', '$desc', '$precio') WHERE id =.$id";
+  $consulta=mysqli_query($conexion,$sql);
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -29,12 +37,20 @@ if(session_id() == ''){
     <h1>Producto</h1>
 
 
+    <form method="post">
     <div class="productos">
   <div class="main-carousel" data-flickity='{ "cellAlign": "left","freeScroll": true ,"wrapAround": true, "contain": true, "autoPlay": 2500,"pauseAutoPlayOnHover": false }'>
+    <form method="post">
+
+    </form>
       <?php 
         
          if($result->num_rows > 0){
           while ($row = $result->fetch_assoc()){
+            $nombre = $row["nom_product"];
+            $desc = $row["desc_product"];
+            $precio = $row["precio"];
+
             echo "<div class='carousel-cell'>
             <h1>".$row["nom_product"]."</h1>
             <p>".$row["desc_product"]."</p>
@@ -49,6 +65,10 @@ if(session_id() == ''){
     </div>
   
   </div>
+      
+      </form>
+
+    
     
 </body>
 </html>
