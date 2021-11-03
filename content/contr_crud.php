@@ -2,6 +2,17 @@
 include ('../controllers/db.php');
 include ('../menu.php');
    
+if(isset($_POST['nombre'])) { 
+    $nom = $_POST['nombre'];
+}
+
+if(isset($_POST['nombre'])) { 
+    $nom = $_POST['nombre'];
+}
+
+if(isset($_POST['nombre'])) { 
+    $nom = $_POST['nombre'];
+}
 
 if(isset($_POST['nombre'])) { 
     $nom = $_POST['nombre'];

@@ -1,0 +1,10 @@
+.usuario{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.producto{
+    display: flex;
+    flex-wrap: wrap;
+}

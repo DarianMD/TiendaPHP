@@ -4,8 +4,10 @@ include ('../menu.php');
 
 
 $id = $_GET['id'];
+
 $producto="SELECT * from producto WHERE id = $id";
 $result = $conexion->query($producto);
+
 
 
 session_start();
@@ -22,11 +24,6 @@ if($result->num_rows > 0){
 }}
 
      
-if($conexion){
-        $sql="UPDATE `daw2`.`producto` SET nom_product = '$nombre', desc_product = '$desc', precio = '$precio' WHERE id = '$id' ";
-         $consulta=mysqli_query($conexion,$sql);
-}
-
 
 ?>
 
@@ -42,8 +39,9 @@ if($conexion){
 
     <h1>Producto</h1>
 
- w
+ 
       <form action="contr_crud.php" method="POST">
+                <img src="" alt="">
               <input type="" name="id" readonly value="<?php echo $id;?>">
               <input type="text" name="nombre" value="<?php echo $nombre;?>">
               <input type="text" name="descripcion" value="<?php echo $desc;?>">
