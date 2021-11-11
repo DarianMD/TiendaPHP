@@ -5,18 +5,21 @@ include ('../menu.php');
 
 $id = $_GET['id'];
 
-$usuario="SELECT * from usuario WHERE id = $id";
-$resultado = $conexion->query($usuario);
+$query = "SELECT * FROM usuario WHERE id = '$id'";
+$result = $conexion->query($query);
+$sql = mysqli_query($conexion, "SELECT * FROM usuario WHERE id ='$id'");
+
+$nombre = "";
 
 
 
-if($resultado-> num_rows > 0){
-        while ($row = $resultado->fetch_assoc()){
-                $nombre = $row["nom_product"];
-                $desc = $row["desc_product"];
-                $precio = $row["precio"];   
-}}
-
+while($row = mysqli_fetch_assoc($sql)){
+   $nombre =$row['USER'];
+   $contra =$row['PASSWD'];
+   $email = $row['EMAIL'];
+   $rol = $row['rol'];
+  
+  }
      
 
 ?>
@@ -34,12 +37,12 @@ if($resultado-> num_rows > 0){
     <h1>Producto</h1>
 
  
-      <form action="contr_crud.php" method="POST">
-                <img src="" alt="">
-              <input type="" name="id" readonly value="<?php echo $id;?>">
+      <form action="contr_usr_crud.php" method="POST">
+              <input type="text" name="id" readonly value="<?php echo $id;?>">
               <input type="text" name="nombre" value="<?php echo $nombre;?>">
-              <input type="text" name="descripcion" value="<?php echo $desc;?>">
-              <input type="number" name="precio" value="<?php echo $precio;?>">
+              <input type="text" name="contra" value="<?php echo $contra;?>">
+              <input type="text" name="email" value="<?php echo $email;?>">
+              <input type="text" name="rol" value="<?php echo $rol;?>">
               <input type="submit" value="SUBMIT" class="submit-btn">
             </form>
 

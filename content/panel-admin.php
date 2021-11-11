@@ -36,7 +36,7 @@
             <p>".$row["EMAIL"]."</p>
             <p>".$row["rol"]."</p>
             <a href='crud_user.php?id=".$row["ID"]."'>Editar</a>
-            <a href='logica.php?id=".$row["ID"]."'>Borrar</a>
+            <a href='contr_del_usr.php?id=".$row["ID"]."'>Borrar</a>
             <br>
             </div>";
             
@@ -57,7 +57,7 @@
             <p>".$row["desc_product"]."</p>
             <p>".$row["precio"]."</p>
             <a href='crud.php?id=".$row["id"]."'>Editar</a>
-            <a href='logica.php?id=".$row["id"]."'>Borrar</a>
+            <a href='contr_del_prod.php?id=".$row["id"]."'>Borrar</a>
             <br>
             </div>";
             
