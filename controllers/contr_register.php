@@ -56,10 +56,7 @@ $result = $conexion->query($producto);
 
 $usuar_sel="select * from usuario where user=".$user;
 $result = $conexion->query($usuar_sel);
-if (mysql_num_rows($result) > 0){
-        echo "El usuario ya existe";
-    }
-else{
+
     if($conexion){
 
         $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$passwd', '$email', sysdate(), sysdate(),'$id',null,'$rol')";
@@ -70,7 +67,7 @@ else{
       
      
      }   
-}
+
 
 
 

@@ -22,6 +22,7 @@
 <body>
 
   
+  <button><a href="create_user.php">Crear Usuario</a></button>
   <div class="usuario">
       <?php 
         
@@ -45,6 +46,9 @@
      ?>
   </div>
     
+
+  <button><a href="create_product.php">Crear Producto</a></button>
+
 
   <div class="producto">
       <?php 
