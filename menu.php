@@ -24,7 +24,7 @@
 <nav class="navigation-wrapper">
   <ul class="nav-list">
     <li class="nav-item">
-      <a href="#/"><em>Home</em></a>
+      <a href="/"><em>Home</em></a>
     </li>
     
     <li class="nav-item">
@@ -38,7 +38,11 @@
         }
        else{
          echo $_SESSION["nombre"];
-         echo "<br>";
+         if($_SESSION["rol"] == 'a'){
+           echo '<br>';
+          echo "<a href='./content/panel-admin.php'><em>Panel Admin</em></a>";
+         }
+         echo '<br>';
          echo "<a href='logout.php'><em>Logout</em></a>";
 
        }

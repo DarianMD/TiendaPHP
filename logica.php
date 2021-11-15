@@ -8,12 +8,12 @@ $producto="SELECT * from producto WHERE id = $id";
 $result = $conexion->query($producto);
 
 
-session_start();
 
-if(session_id() == ''){
-    header("Location:login.php");
+if(!isset($_SESSION['nombre'])){
+
+  header("Location: login.php");
+
 }
-
 
 if(isset($_POST['boton1'])){
   $sql="INSERT INTO `daw2`.`producto` VALUES (null,'$nombre', '$desc', '$precio') WHERE id =.$id";
