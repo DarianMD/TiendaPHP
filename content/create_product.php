@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  $_SESSION["rol"];
+  
+  if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
+
+    header("Location: ../login.php");
+
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

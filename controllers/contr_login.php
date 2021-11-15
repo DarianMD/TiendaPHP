@@ -20,8 +20,11 @@ $consulta = $conexion->query($sql);
 $resu = mysqli_query($conexion, "SELECT * FROM usuario WHERE EMAIL = '$username' AND PASSWD = '$password'");
 $row = mysqli_fetch_assoc($resu);
 $rol = $row['rol'];
+$nombre = $row['USER'];
 
 $_SESSION["rol"] = $rol;
+$_SESSION["nombre"] = $nombre;
+
 
 if(!$consulta = $conexion->query($sql)){
     echo "ERROR: no se pudo ejecutar la consulta!";}
@@ -32,13 +35,10 @@ if(!$consulta = $conexion->query($sql)){
             echo "<script>alert('Error: usuario y/o clave incorrectos!!');</script>";
         }else{
             if($rol == "a"){
-                echo $_SESSION["rol"];
-                echo "Admin";
-
+                header("Location: ../content/panel-admin.php");
             }
             else{
-                echo $_SESSION["rol"];
-                echo "Usuario";
+                header("Location: ../index.php");
             }
         }
 

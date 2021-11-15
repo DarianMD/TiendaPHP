@@ -1,6 +1,15 @@
 <?php
 include ('../controllers/db.php');
 include ('../menu.php');
+
+session_start();
+$_SESSION["rol"];
+
+if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
+
+    header("Location: ../login.php");
+
+  }
    
 if(isset($_POST['nombre'])) { 
     $nom = $_POST['nombre'];

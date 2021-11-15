@@ -11,9 +11,12 @@ $result = $conexion->query($producto);
 
 
 session_start();
+$_SESSION["rol"];
 
-if(session_id() == ''){
-    header("Location:login.php");
+if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
+
+  header("Location: ../login.php");
+
 }
 
 if($result->num_rows > 0){

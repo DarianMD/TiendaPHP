@@ -6,6 +6,17 @@
   $usuario="SELECT * from usuario";
   $resultado = $conexion->query($usuario);
 
+  session_start();
+  $_SESSION["rol"];
+  
+  if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
+
+    header("Location: ../login.php");
+
+  }
+
+
+
 
 ?>
 

@@ -29,12 +29,15 @@
     
     <li class="nav-item">
       <?php
-        if(session_id() == ''){
+        
+        session_start();
+
+        if(!isset($_SESSION['nombre'])){
           echo "<a href='login.php'><em>Login</em></a>";
 
         }
        else{
-         echo "Usuario X";
+         echo $_SESSION["nombre"];
          echo "<br>";
          echo "<a href='logout.php'><em>Logout</em></a>";
 

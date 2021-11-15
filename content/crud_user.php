@@ -2,6 +2,14 @@
 include ('../controllers/db.php');
 include ('../menu.php');
 
+session_start();
+$_SESSION["rol"];
+
+if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
+
+  header("Location: ../login.php");
+
+}
 
 $id = $_GET['id'];
 
@@ -10,6 +18,7 @@ $result = $conexion->query($query);
 $sql = mysqli_query($conexion, "SELECT * FROM usuario WHERE id ='$id'");
 
 $nombre = "";
+
 
 
 
