@@ -11,7 +11,7 @@
   <div class="flex-container">
     <div class="content-container">
       <div class="form-container">
-        <form action="/controllers/contr_login.php">
+        <form action="/controllers/contr_login.php" method="POST">
           <h1>
             Login
           </h1>
