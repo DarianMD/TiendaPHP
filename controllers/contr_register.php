@@ -20,6 +20,8 @@ if(isset($_POST['email'])) {
     $email = strtolower($email);
 }
 
+
+
 if(isset($_POST['img'])) { 
     $image = $_POST['img'];
 }
@@ -30,6 +32,8 @@ $id = $id.randw();
 
 
 $rol = 'u';
+
+$hashed_password = hash('sha256', $passwd);
 
 function randw($length=6){
     return substr(str_shuffle("qwertyuiopasdfghjklzxcvbnm"),0,$length);
@@ -59,7 +63,7 @@ $result = $conexion->query($usuar_sel);
 
     if($conexion){
 
-        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$passwd', '$email', sysdate(), sysdate(),'$id',null,'$rol')";
+        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'$id',null,'$rol')";
          $consulta=mysqli_query($conexion,$sql);
          
          echo "Registro realizado correctamente"; 

@@ -14,10 +14,16 @@ if(isset($_POST['password'])) {
     $password = $_POST['password'];
 }
 
-$sql = "SELECT * FROM usuario WHERE EMAIL = '$username' AND PASSWD = '$password'";
+
+
+$hashed_password = hash('sha256', $password);
+
+
+
+$sql = "SELECT * FROM usuario WHERE EMAIL = '$username' AND PASSWD = '$hashed_password'";
 $consulta = $conexion->query($sql);
 
-$resu = mysqli_query($conexion, "SELECT * FROM usuario WHERE EMAIL = '$username' AND PASSWD = '$password'");
+$resu = mysqli_query($conexion, "SELECT * FROM usuario WHERE EMAIL = '$username' AND PASSWD = '$hashed_password'");
 $row = mysqli_fetch_assoc($resu);
 $rol = $row['rol'];
 $nombre = $row['USER'];

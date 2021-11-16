@@ -38,6 +38,9 @@ if(isset($_SESSION['nombre'])){
           <input type="password" name="password" value="">
           <br><br>
           <input type="submit" value="SUBMIT" class="submit-btn">
+          <br>
+          <span class="subtitle"><a href="./content/cont_rec_pass.php">Recuperar Contraseña</a>:</span>
+
         </form>
       </div>
     </div>

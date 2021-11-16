@@ -43,7 +43,7 @@
           echo "<a href='./content/panel-admin.php'><em>Panel Admin</em></a>";
          }
          echo '<br>';
-         echo "<a href='logout.php'><em>Logout</em></a>";
+         echo "<a href='./logout.php'><em>Logout</em></a>";
 
        }
       

@@ -23,7 +23,7 @@ if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
     <div class="flex-container">
         <div class="content-container">
           <div class="form-container">
-            <form action="../controllers/contr_register.php" method="POST">
+            <form action="../controllers/contr_register_admin.php" method="POST">
               <h1>
                 Register
               </h1>
@@ -40,6 +40,10 @@ if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
               <span class="subtitle">Correo:</span>
               <br>
               <input type="email" name="email" placeholder="E-MAIL" required  maxlength="35">
+              <br>
+              <span class="subtitle">Permisos:</span>
+              <br>
+              <input type="text" name="permiso" placeholder="Permisos" required  maxlength="1">
               <br>
               <label for="img" class="subtitle">Select image:</label>
               <input type="file" id="img" name="img" accept="image/*">
