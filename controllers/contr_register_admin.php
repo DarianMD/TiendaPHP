@@ -67,7 +67,7 @@ $result = $conexion->query($usuar_sel);
 
     if($conexion){
 
-        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'$id',null,'$permi')";
+        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'$id',null,'$permi',0)";
          $consulta=mysqli_query($conexion,$sql);
          
          echo "Registro realizado correctamente"; 
