@@ -27,19 +27,26 @@ $resu = mysqli_query($conexion, "SELECT * FROM usuario WHERE EMAIL = '$username'
 $row = mysqli_fetch_assoc($resu);
 $rol = $row['rol'];
 $nombre = $row['USER'];
+$idens = $row['ID'];
 
 $_SESSION["rol"] = $rol;
 $_SESSION["nombre"] = $nombre;
+$_SESSION["id"] = $idens;
 
+
+$last_log="UPDATE usuario SET LAST_LOGIN = CURRENT_TIMESTAMP WHERE ID = '$idens' ";
 
 if(!$consulta = $conexion->query($sql)){
     echo "ERROR: no se pudo ejecutar la consulta!";}
     else{
         $filas = mysqli_num_rows($consulta);
 
+
         if($filas == 0){
             echo "<script>alert('Error: usuario y/o clave incorrectos!!');</script>";
         }else{
+            $last_logi=mysqli_query($conexion,$last_log);
+
             if($rol == "a"){
                 header("Location: ../content/panel-admin.php");
             }

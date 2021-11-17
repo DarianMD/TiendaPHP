@@ -4,6 +4,8 @@
   $result = $conexion->query($producto);
 
 
+
+
 ?>
 
 
@@ -32,24 +34,27 @@
         
         session_start();
 
+       
+
         if(!isset($_SESSION['nombre'])){
           echo "<a href='/login.php'><em>Login</em></a>";
 
         }
        else{
          echo $_SESSION["nombre"];
+
          if($_SESSION["rol"] == 'a'){
            echo '<br>';
           echo "<a href='/content/panel-admin.php'><em>Panel Admin</em></a>";
          }
          if($_SESSION["rol"] == 'u'){
           echo '<br>';
-          echo "<a href='/usr_perfil.php'><em>Mi Perfil</em></a>";
+          echo "<a href='/usr_perfil.php?id=".$_SESSION["id"]."'><em>Mi Perfil</em></a>";
           echo '<br>';
           echo "<a href='/usr_compras.php'><em>Mis Compras</em></a>";
           echo '<br>';
           echo "<a href='/usr_compras.php'><em>Ingresar efectivo</em></a>";
-
+          
           
         }
          echo '<br>';

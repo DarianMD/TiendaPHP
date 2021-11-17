@@ -1,8 +1,4 @@
-[Tue Nov 16 19:02:58.689233 2021] [mpm_winnt:notice] [pid 16604:tid 904] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Tue Nov 16 19:02:58.689233 2021] [mpm_winnt:notice] [pid 16604:tid 904] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Tue Nov 16 19:02:58.689233 2021] [core:notice] [pid 16604:tid 904] AH00094: Command line: 'C:\\Users\\DAW2\\Desktop\\TiendaPHP\\USBWebserver/apache2/bin/httpd_usbwv8.exe -d C:/Users/DAW2/Desktop/TiendaPHP/USBWebserver/apache2'
-[Tue Nov 16 19:02:58.689233 2021] [mpm_winnt:notice] [pid 16604:tid 904] AH00418: Parent: Created child process 16612
-[Tue Nov 16 19:02:59.345955 2021] [mpm_winnt:notice] [pid 16612:tid 880] AH00354: Child: Starting 64 worker threads.
-[Tue Nov 16 19:17:24.305037 2021] [:error] [pid 16612:tid 1368] [client ::1:62305] PHP Notice:  A session had already been started - ignoring session_start() in C:\\Users\\DAW2\\Desktop\\TiendaPHP\\content\\contr_del_usr.php on line 5, referer: http://localhost:8080/content/panel-admin.php
-[Tue Nov 16 19:22:20.767878 2021] [:error] [pid 16612:tid 1368] [client ::1:62377] PHP Notice:  A session had already been started - ignoring session_start() in C:\\Users\\DAW2\\Desktop\\TiendaPHP\\content\\crud_user.php on line 5, referer: http://localhost:8080/content/panel-admin.php
-[Tue Nov 16 19:22:37.254817 2021] [:error] [pid 16612:tid 1368] [client ::1:62394] PHP Notice:  A session had already been started - ignoring session_start() in C:\\Users\\DAW2\\Desktop\\TiendaPHP\\content\\contr_del_usr.php on line 5, referer: http://localhost:8080/content/panel-admin.php
+[Wed Nov 17 17:19:58.020263 2021] [mpm_winnt:notice] [pid 12952:tid 844] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Wed Nov 17 17:19:58.022265 2021] [mpm_winnt:notice] [pid 12952:tid 844] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Wed Nov 17 17:19:58.022277 2021] [core:notice] [pid 12952:tid 844] AH00094: Command line: 'C:\\Users\\DAW2\\Desktop\\TiendaPHP\\USBWebserver/apache2/bin/httpd_usbwv8.exe -d C:/Users/DAW2/Desktop/TiendaPHP/USBWebserver/apache2'
+[Wed Nov 17 17:19:58.022277 2021] [mpm_winnt:notice] [pid 12952:tid 844] AH00418: Parent: Created child process 16820
