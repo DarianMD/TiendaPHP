@@ -21,6 +21,14 @@ if(isset($_POST['boton1'])){
 }
 
 
+if($result->num_rows > 0){
+  while ($row = $result->fetch_assoc()){
+    $ident = $row["id"];
+    $nombre = $row["nom_product"];
+    $desc = $row["desc_product"];
+    $precio = $row["precio"];
+  }
+}
 
 ?>
 
@@ -45,22 +53,17 @@ if(isset($_POST['boton1'])){
     </form>
       <?php 
         
-         if($result->num_rows > 0){
-          while ($row = $result->fetch_assoc()){
-            $nombre = $row["nom_product"];
-            $desc = $row["desc_product"];
-            $precio = $row["precio"];
 
             echo "<div class='carousel-cell'>
-            <h1>".$row["nom_product"]."</h1>
-            <p>".$row["desc_product"]."</p>
-            <p>".$row["precio"]."</p>
-            <a href='logica.php?id=".$row["id"]."'>Comprar</a>
+            <h1>".$nombre."</h1>
+            <p>".$desc."</p>
+            <p>".$precio."</p>
+            <a href='/content/contr_compr.php?id=".$ident."'>Comprar</a>
             <br>
             </div>";
             
-          }
-        } 
+          
+        
      ?>
     </div>
   

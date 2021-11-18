@@ -51,9 +51,9 @@
           echo '<br>';
           echo "<a href='/usr_perfil.php?id=".$_SESSION["id"]."'><em>Mi Perfil</em></a>";
           echo '<br>';
-          echo "<a href='/usr_compras.php'><em>Mis Compras</em></a>";
+          echo "<a href='/usr_compras.php?id=".$_SESSION["id"]."'><em>Mis Compras</em></a>";
           echo '<br>';
-          echo "<a href='/usr_compras.php'><em>Ingresar efectivo</em></a>";
+          echo "<a href='/insert_gold.php?id=".$_SESSION["id"]."'><em>Ingresar Efectivo</em></a>";
           
           
         }
