@@ -1,17 +1,41 @@
 <?php
 
-session_start();
+include ('../controllers/db.php');
 
+session_start();
 
 
 if(isset($_GET['id'])) { 
     $id = $_GET['id'];
 }
 
+$id_usr = $_SESSION["id"];
 
-$money_sel="UPDATE usuario SET MONEY =  MONEY + $dinero WHERE ID = '$id' ";
-$money_ins=mysqli_query($conexion,$money_sel);
+$sel_din_prod="SELECT * FROM producto where id = '$id' ";
+$sel_din_prod_query=mysqli_query($conexion,$sel_din_prod);
+$row = $sel_din_prod_query->fetch_assoc();
+$precio = $row["precio"];
 
 
+$ins_din_usr="UPDATE usuario SET MONEY = MONEY - '$precio' where ID = '$id_usr'";
+$ins_tiquet="INSERT INTO `daw2`.`tiquets` VALUES (null,'$id_usr', $id, CURRENT_TIMESTAMP)";
+$sel_din_prod="SELECT * FROM usuario where MONEY < '$precio' ";
+$consulta = $conexion->query($sel_din_prod);
+
+
+if($conexion){
+    $filas = mysqli_num_rows($consulta);
+
+    if($filas > 0){
+        echo "<script>alert('No tienes saldo suficiente para realizar la compra');</script>";
+
+    }
+    else{
+        $camb_money=mysqli_query($conexion,$ins_din_usr);
+        $camb_tiquet=mysqli_query($conexion,$ins_tiquet);
+    }
+
+ 
+ }
 
 ?>
