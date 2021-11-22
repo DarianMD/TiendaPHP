@@ -27,6 +27,8 @@ if(isset($_POST['img'])) {
 }
 
 
+
+
 $id = '';
 $id = $id.randw();
 
@@ -40,9 +42,16 @@ function randw($length=6){
 }
 
 
-/*$input = file_get_contents($image);
-$output = '../styles/assets/images/'.$id.'.jpg';
-file_put_contents($output, $input);*/
+
+
+$tmp_name = $_FILES['img_up']["tmp_name"];
+$name = $_FILES['img_up']["name"];
+$ext = pathinfo($name, PATHINFO_EXTENSION);
+$imagen = $id.'.'.$ext;
+$nuevo_path="../styles/assets/".$id.'.'.$ext;
+move_uploaded_file($tmp_name,$nuevo_path);
+
+
 
 
 
@@ -63,7 +72,7 @@ $result = $conexion->query($usuar_sel);
 
     if($conexion){
 
-        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'$id',null,'$rol',0)";
+        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'$imagen',null,'$rol',0)";
          $consulta=mysqli_query($conexion,$sql);
          
          echo "Registro realizado correctamente"; 

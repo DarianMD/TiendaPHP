@@ -28,10 +28,12 @@ $row = mysqli_fetch_assoc($resu);
 $rol = $row['rol'];
 $nombre = $row['USER'];
 $idens = $row['ID'];
+$imagen_perf = $row['IMAGE'];
 
 $_SESSION["rol"] = $rol;
 $_SESSION["nombre"] = $nombre;
 $_SESSION["id"] = $idens;
+$_SESSION["image"] = $imagen_perf;
 
 
 $last_log="UPDATE usuario SET LAST_LOGIN = CURRENT_TIMESTAMP WHERE ID = '$idens' ";

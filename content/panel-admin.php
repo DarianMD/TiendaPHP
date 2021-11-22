@@ -18,6 +18,8 @@
 
 
 
+
+
 ?>
 
 
@@ -41,8 +43,22 @@
           while ($row = $resultado->fetch_assoc()){
             $ini = $row["USER"];
             $ini = substr($ini, 0,2);
+
+            $imagen_usr = $row["IMAGE"];
+            $ruta_imagen = "../styles/assets/$imagen_usr";
+
+
+            if(file_exists($ruta_imagen)){
+              $imagen_f = $ruta_imagen;
+            }
+            else{
+              $imagen_f = "https://avatars.dicebear.com/api/initials/$ini.svg";
+
+            }
+
+
             echo "<div class='carousel-cell'>
-            <img src='https://avatars.dicebear.com/api/initials/$ini.svg' width='100' height='100'>
+            <img src='$imagen_f' width='100' height='100'>
             <h1>".$row["USER"]."</h1>
             <p>".$row["PASSWD"]."</p>
             <p>".$row["EMAIL"]."</p>

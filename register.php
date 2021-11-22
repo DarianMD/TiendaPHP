@@ -11,7 +11,7 @@
     <div class="flex-container">
         <div class="content-container">
           <div class="form-container">
-            <form action="/controllers/contr_register.php" method="POST">
+            <form action="/controllers/contr_register.php" method="POST" enctype="multipart/form-data">
               <h1>
                 Register
               </h1>
@@ -30,7 +30,7 @@
               <input type="email" name="email" placeholder="E-MAIL" required  maxlength="35">
               <br>
               <label for="img" class="subtitle">Select image:</label>
-              <input type="file" id="img" name="img" accept="image/*">
+              <input type="file" name="img_up">
               <br>
               <input type="submit" value="SUBMIT" class="submit-btn">
             </form>
