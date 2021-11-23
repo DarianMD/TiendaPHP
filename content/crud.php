@@ -10,7 +10,6 @@ $result = $conexion->query($producto);
 
 
 
-session_start();
 $_SESSION["rol"];
 
 if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){

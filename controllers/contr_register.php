@@ -1,6 +1,8 @@
 <?php
 
 include ('db.php');
+include ('./funciones/include_funciones.php');
+
 
 
 
@@ -22,35 +24,23 @@ if(isset($_POST['email'])) {
 
 
 
-if(isset($_POST['img'])) { 
-    $image = $_POST['img'];
-}
-
-
 
 
 $id = '';
-$id = $id.randw();
+$id = randw(6);
 
 
 $rol = 'u';
 
 $hashed_password = hash('sha256', $passwd);
 
-function randw($length=6){
-    return substr(str_shuffle("qwertyuiopasdfghjklzxcvbnm"),0,$length);
-}
+
 
 
 
 
 $tmp_name = $_FILES['img_up']["tmp_name"];
-$name = $_FILES['img_up']["name"];
-$ext = pathinfo($name, PATHINFO_EXTENSION);
-$imagen = $id.'.'.$ext;
-$nuevo_path="../styles/assets/".$id.'.'.$ext;
-move_uploaded_file($tmp_name,$nuevo_path);
-
+    $name = $_FILES['img_up']["name"];
 
 
 
@@ -62,7 +52,7 @@ $producto="SELECT * from usuario";
 $result = $conexion->query($producto);
 
     if($row['id'] = $id){
-        $id = $id.randw();
+        $id = randw(6);
     }
 
 
@@ -72,8 +62,10 @@ $result = $conexion->query($usuar_sel);
 
     if($conexion){
 
-        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'$imagen',null,'$rol',0)";
+        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'null',null,'$rol',0)";
          $consulta=mysqli_query($conexion,$sql);
+
+         subirImagen(1,$tmp_name,$name,$id,$conexion);
          
          echo "Registro realizado correctamente"; 
      

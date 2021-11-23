@@ -44,7 +44,7 @@
             $ini = $row["USER"];
             $ini = substr($ini, 0,2);
 
-            $imagen_usr = $row["IMAGE"];
+            $imagen_usr = $row["IMAGEN"];
             $ruta_imagen = "../styles/assets/$imagen_usr";
 
 
