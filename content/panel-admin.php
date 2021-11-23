@@ -83,7 +83,22 @@
          if($result->num_rows > 0){
           while ($row = $result->fetch_assoc()){
 
+            $imagen_usr = $row["imagen"];
+            $ruta_imagen = "../styles/assets/producto/$imagen_usr";
+
+
+            $nom_prod = $row["desc_product"];
+
+            if(file_exists($ruta_imagen)){
+              $imagen_f = $ruta_imagen;
+            }
+            else{
+              $imagen_f = "https://avatars.dicebear.com/api/initials/$nom_prod.svg";
+
+            }
+
             echo "<div class='carousel-cell'>
+            <img src='$imagen_f' width='100' height='100'>
             <h1>".$row["nom_product"]."</h1>
             <p>".$row["desc_product"]."</p>
             <p>".$row["precio"]."</p>
