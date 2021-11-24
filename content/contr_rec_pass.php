@@ -5,11 +5,8 @@ include ('../controllers/db.php');
 
 session_start();
 
-if(isset($_SESSION['nombre'])){
-
-    header("Location: ../login.php");
-
-  }
+include ('../controllers/funciones/include_funciones.php');
+sessiones(1);
 
 
   if(isset($_POST['username'])) { 

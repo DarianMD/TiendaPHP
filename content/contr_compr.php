@@ -1,8 +1,9 @@
 <?php
-
+  include ('../controllers/funciones/include_funciones.php');
 include ('../controllers/db.php');
 
 session_start();
+sessiones(2);
 
 
 if(isset($_GET['id'])) { 

@@ -1,7 +1,5 @@
 <?php
   include ('/controllers/db.php');
-  include ('menu.php');
-  include ('producto.php');
 
 
 ?>
@@ -20,6 +18,12 @@
 
 
   
+    <div class="div">
+      <section class="menu"><?php include ('menu.php');?></section>
+    </div>
+    <section class="producto">  <?php include ('producto.php');?></section>
+
+
     
 
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">

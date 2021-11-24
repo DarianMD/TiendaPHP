@@ -1,0 +1,33 @@
+.productos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-carousel{
+  width: 500px;
+
+}
+.carousel-cell {
+  width: 100%; /* full width */
+  height: 300px; /* height of carousel */
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+
+}
+
+.flickity-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #19F;
+}
+
+.flickity-button {
+  background: transparent;
+}

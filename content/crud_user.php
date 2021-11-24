@@ -1,16 +1,13 @@
 <?php
 include ('../controllers/db.php');
 include ('../menu.php');
+include ('../controllers/funciones/include_funciones.php');
+
 
 
 session_start();
-$_SESSION["rol"];
+sessiones(2);
 
-if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
-
-  header("Location: ../login.php");
-
-}
 
 $id = $_GET['id'];
 

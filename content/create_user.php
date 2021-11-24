@@ -1,13 +1,8 @@
 <?php
 
-session_start();
-$_SESSION["rol"];
+include ('../controllers/funciones/include_funciones.php');
+sessiones(2);
 
-if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
-
-  header("Location: ../login.php");
-
-}
 
 ?>
 <!DOCTYPE html>

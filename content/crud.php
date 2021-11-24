@@ -1,6 +1,9 @@
 <?php
 include ('../controllers/db.php');
 include ('../menu.php');
+include ('../controllers/funciones/include_funciones.php');
+
+sessiones(2);
 
 
 $id = $_GET['id'];

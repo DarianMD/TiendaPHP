@@ -6,13 +6,7 @@ include ('../controllers/funciones/include_funciones.php');
 
 
 session_start();
-$_SESSION["rol"];
-
-if($_SESSION["rol"] == 'u' || !isset($_SESSION['nombre'])){
-
-    header("Location: ../login.php");
-
-  }
+sessiones(2);
 
 if(isset($_POST['id'])) { 
     $id = $_POST['id'];

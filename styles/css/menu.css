@@ -1,0 +1,65 @@
+html {
+    font-size: 23px;
+    background-image: url(/styles/assets/web/fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    font-size: 0.65em;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  
+  .nav {
+    position: relative;
+    margin: 15%;
+    text-align: right;
+    top: 30%;
+    transform: translateY(-50%);
+    font-weight: bold;
+  }
+  
+  .nav ul {
+    list-style: none;
+  }
+  .nav ul li {
+    position: relative;
+  }
+  .nav ul li a {
+    line-height: 5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4em;
+    color: rgba(0, 0, 0, 0.6);
+    display: block;
+    transition: all ease-out 300ms;
+  }
+  .nav ul li.active a {
+    color: black;
+  }
+  .nav ul li:not(.active)::after {
+    opacity: 0.5;
+  }
+  .nav ul li:not(.active):hover a {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .nav ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    background: #041c2c;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, #041c2c, #041c2c);
+  }
