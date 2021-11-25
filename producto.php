@@ -25,6 +25,7 @@
         
          if($result->num_rows > 0){
           while ($row = $result->fetch_assoc()){
+            
             echo "<div class='carousel-cell'>
             <h1>".$row["nom_product"]."</h1>
             <p>".$row["desc_product"]."</p>

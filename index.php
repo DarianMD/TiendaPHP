@@ -18,10 +18,9 @@
 
 
   
-    <div class="div">
       <section class="menu"><?php include ('menu.php');?></section>
-    </div>
-    <section class="producto">  <?php include ('producto.php');?></section>
+      <section class="producto">  <?php include ('producto.php');?></section>
+
 
 
     

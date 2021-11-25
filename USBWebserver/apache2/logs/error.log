@@ -1,9 +1,0 @@
-[Wed Nov 24 19:13:42.659640 2021] [mpm_winnt:notice] [pid 1748:tid 860] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Wed Nov 24 19:13:42.659640 2021] [mpm_winnt:notice] [pid 1748:tid 860] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Wed Nov 24 19:13:42.659640 2021] [core:notice] [pid 1748:tid 860] AH00094: Command line: 'C:\\Users\\DAW2\\Desktop\\TiendaPHP\\USBWebserver/apache2/bin/httpd_usbwv8.exe -d C:/Users/DAW2/Desktop/TiendaPHP/USBWebserver/apache2'
-[Wed Nov 24 19:13:42.659640 2021] [mpm_winnt:notice] [pid 1748:tid 860] AH00418: Parent: Created child process 8596
-[Wed Nov 24 19:13:43.312569 2021] [mpm_winnt:notice] [pid 8596:tid 852] AH00354: Child: Starting 64 worker threads.
-[Wed Nov 24 19:14:14.847692 2021] [:error] [pid 8596:tid 1364] [client ::1:51144] PHP Notice:  Undefined index: IMAGE in C:\\Users\\DAW2\\Desktop\\TiendaPHP\\controllers\\contr_login.php on line 31, referer: http://localhost:8080/login.php
-[Wed Nov 24 19:30:31.016051 2021] [:error] [pid 8596:tid 1360] [client ::1:61458] PHP Notice:  Undefined index: IMAGE in C:\\Users\\DAW2\\Desktop\\TiendaPHP\\controllers\\contr_login.php on line 31, referer: http://localhost:8080/login.php
-[Wed Nov 24 19:38:53.926260 2021] [:error] [pid 8596:tid 1368] [client ::1:61856] PHP Notice:  A session had already been started - ignoring session_start() in C:\\Users\\DAW2\\Desktop\\TiendaPHP\\controllers\\funciones\\sessiones.php on line 5, referer: http://localhost:8080/index.php
-[Wed Nov 24 19:38:53.926260 2021] [:error] [pid 8596:tid 1368] [client ::1:61856] PHP Notice:  Undefined index: rol in C:\\Users\\DAW2\\Desktop\\TiendaPHP\\controllers\\funciones\\sessiones.php on line 6, referer: http://localhost:8080/index.php
