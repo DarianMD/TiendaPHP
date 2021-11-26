@@ -2,7 +2,6 @@
 
 function lastLog($id){
     include ('../controllers/db.php');
-    include ('../controllers/funciones/include_funciones.php');
 
     $last_log="UPDATE usuario SET LAST_LOGIN = CURRENT_TIMESTAMP WHERE ID = '$id' ";
     $last_logi=mysqli_query($conexion,$last_log);
@@ -26,7 +25,7 @@ function login($username, $password){
 
     sessionUser($rol,$nombre,$idens,$imagen_perf);
     userExist($username,$password);
-    lastLog($idens);
+
 
 }
 
@@ -49,7 +48,6 @@ function userExist($username,$password){
 
     if($filas == 0){
         echo "<script>alert('Error: usuario y/o clave incorrectos!!');</script>";
-        session_start();
         session_destroy();
     }else{
  
@@ -60,6 +58,10 @@ function userExist($username,$password){
 
 
 function loginRol(){
+    
+    $idens = $_SESSION["id"];
+    lastLog($idens);
+
     if($_SESSION["rol"] == "a"){
         header("Location: ../content/panel-admin.php");
     }
