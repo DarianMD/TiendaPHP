@@ -1,0 +1,71 @@
+<?php
+
+function lastLog($id){
+    include ('../controllers/db.php');
+    include ('../controllers/funciones/include_funciones.php');
+
+    $last_log="UPDATE usuario SET LAST_LOGIN = CURRENT_TIMESTAMP WHERE ID = '$id' ";
+    $last_logi=mysqli_query($conexion,$last_log);
+}
+
+
+
+function login($username, $password){
+
+    include ('../controllers/db.php');
+
+    $password = hashPass($password);
+
+
+    $resu = mysqli_query($conexion, "SELECT * FROM usuario WHERE EMAIL = '$username' AND PASSWD = '$password'");
+    $row = mysqli_fetch_assoc($resu);
+    $rol = $row['rol'];
+    $nombre = $row['USER'];
+    $idens = $row['ID'];
+    $imagen_perf = $row['IMAGEN'];
+
+    sessionUser($rol,$nombre,$idens,$imagen_perf);
+    userExist($username,$password);
+    lastLog($idens);
+
+}
+
+
+function sessionUser($rol,$nombre,$idens,$imagen_perf){
+    $_SESSION["rol"] = $rol;
+    $_SESSION["nombre"] = $nombre;
+    $_SESSION["id"] = $idens;
+    $_SESSION["imagen"] = $imagen_perf;
+
+  
+};
+
+
+function userExist($username,$password){
+    include ('../controllers/db.php');
+
+    $resu = mysqli_query($conexion, "SELECT * FROM usuario WHERE EMAIL = '$username' AND PASSWD = '$password'");
+    $filas = mysqli_num_rows($resu);
+
+    if($filas == 0){
+        echo "<script>alert('Error: usuario y/o clave incorrectos!!');</script>";
+        session_start();
+        session_destroy();
+    }else{
+ 
+        loginRol();
+    }
+
+}
+
+
+function loginRol(){
+    if($_SESSION["rol"] == "a"){
+        header("Location: ../content/panel-admin.php");
+    }
+    if($_SESSION["rol"] == "u"){
+        header("Location: ../index.php");
+    }
+}
+
+?>
