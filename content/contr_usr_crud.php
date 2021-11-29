@@ -12,7 +12,7 @@ if(isset($_POST['id'])) {
     $id = $_POST['id'];
 }
 
-if(isset($_POST['contra'])) { 
+if(isset($_POST['nombre'])) { 
     $nombre = $_POST['nombre'];
 }
 
@@ -36,7 +36,7 @@ $name = $_FILES['img_up']["name"];
 
 if($conexion){
 
-    $ese="UPDATE `daw2`.`usuario` SET USER = '$nombre', PASSWD = '$contra', email = '$email', rol = '$rol' WHERE ID = '$id' ";
+    $ese="UPDATE `usuario` SET USER = '$nombre', PASSWD = '$contra', email = '$email', rol = '$rol' WHERE ID = '$id' ";
     $consulta=mysqli_query($conexion,$ese);
     subirImagen(1,$tmp_name,$name,$id,$conexion);
 

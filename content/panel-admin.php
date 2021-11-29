@@ -67,7 +67,7 @@
          if($result->num_rows > 0){
           while ($row = $result->fetch_assoc()){
             $id = $row["id"];
-            $imagen = mostrarImagen_usr($id,2);
+            $imagen = mostrarImagen_panel($id,2);
 
 
             echo "<div class='carousel-cell'>
