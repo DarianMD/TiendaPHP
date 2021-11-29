@@ -31,7 +31,8 @@ if(isset($_POST['rol'])) {
 $tmp_name = $_FILES['img_up']["tmp_name"];
 $name = $_FILES['img_up']["name"];
 
-
+echo $tmp_name;
+echo $name;
 
 $hashed_password = hash('sha256', $contra);
 
@@ -39,7 +40,11 @@ if($conexion){
 
     $ese="UPDATE `usuario` SET USER = '$nombre', PASSWD = '$hashed_password', email = '$email', rol = '$rol' WHERE ID = '$id' ";
     $consulta=mysqli_query($conexion,$ese);
-    subirImagen(1,$tmp_name,$name,$id,$conexion);
+
+    if(!$tmp_name == "" && !$name == ""){
+        subirImagen(1,$tmp_name,$name,$id,$conexion);
+    }
+    
 
 }
 
