@@ -33,10 +33,11 @@ $name = $_FILES['img_up']["name"];
 
 
 
+$hashed_password = hash('sha256', $contra);
 
 if($conexion){
 
-    $ese="UPDATE `usuario` SET USER = '$nombre', PASSWD = '$contra', email = '$email', rol = '$rol' WHERE ID = '$id' ";
+    $ese="UPDATE `usuario` SET USER = '$nombre', PASSWD = '$hashed_password', email = '$email', rol = '$rol' WHERE ID = '$id' ";
     $consulta=mysqli_query($conexion,$ese);
     subirImagen(1,$tmp_name,$name,$id,$conexion);
 
