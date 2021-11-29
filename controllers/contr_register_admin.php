@@ -1,6 +1,7 @@
 <?php
 
 include ('db.php');
+include ('./funciones/include_funciones.php');
 
 
 
@@ -26,27 +27,17 @@ if(isset($_POST['permiso'])) {
 }
 
 
-
 if(isset($_POST['img'])) { 
     $image = $_POST['img'];
 }
 
 
-$id = '';
-$id = $id.randw();
 
+$tmp_name = $_FILES['img_up']["tmp_name"];
+    $name = $_FILES['img_up']["name"];
 
 
 $hashed_password = hash('sha256', $passwd);
-
-function randw($length=6){
-    return substr(str_shuffle("qwertyuiopasdfghjklzxcvbnm"),0,$length);
-}
-
-
-/*$input = file_get_contents($image);
-$output = '../styles/assets/images/'.$id.'.jpg';
-file_put_contents($output, $input);*/
 
 
 
@@ -56,9 +47,7 @@ mysqli_set_charset($conexion,"utf8");
 $producto="SELECT * from usuario";
 $result = $conexion->query($producto);
 
-    if($row['id'] = $id){
-        $id = $id.randw();
-    }
+$id = randw(6);
 
 
 
@@ -69,6 +58,9 @@ $result = $conexion->query($usuar_sel);
 
         $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'$id',null,'$permi',0)";
          $consulta=mysqli_query($conexion,$sql);
+
+         subirImagen(1,$tmp_name,$name,$id,$conexion);
+
          
          echo "Registro realizado correctamente"; 
      

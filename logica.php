@@ -1,7 +1,5 @@
 <?php
 include ('/controllers/db.php');
-include ('/menu.php');
-include ('controllers/funciones/include_funciones.php');
 
 
 
@@ -12,7 +10,6 @@ $result = $conexion->query($producto);
 
 
 
-sessiones(1);
 
 
 if(isset($_POST['boton1'])){

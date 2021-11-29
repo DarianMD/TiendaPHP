@@ -1,9 +1,7 @@
 <?php
-  include ('../controllers/funciones/include_funciones.php');
 include ('../controllers/db.php');
 
 session_start();
-sessiones(2);
 
 
 if(isset($_GET['id'])) { 
@@ -27,14 +25,10 @@ $consulta = $conexion->query($sel_din_prod);
 if($conexion){
     $filas = mysqli_num_rows($consulta);
 
-    if($filas > 0){
-        echo "<script>alert('No tienes saldo suficiente para realizar la compra');</script>";
-
-    }
-    else{
+   
         $camb_money=mysqli_query($conexion,$ins_din_usr);
         $camb_tiquet=mysqli_query($conexion,$ins_tiquet);
-    }
+    
 
  
  }

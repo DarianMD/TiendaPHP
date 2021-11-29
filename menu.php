@@ -23,7 +23,7 @@
         <aside class="sidebar">
           <nav class="nav">
             <ul>
-              <li class="active"><a href="#">Inicio</a></li>
+              <li class="active"><a href="/">Inicio</a></li>
               <?php
         
         session_start();
