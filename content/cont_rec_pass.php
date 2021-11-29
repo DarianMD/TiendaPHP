@@ -1,14 +1,8 @@
 <?php
-  include ('../controllers/funciones/include_funciones.php');
 
 session_start();
-sessiones(2);
 
-if(isset($_SESSION['nombre'])){
 
-    header("Location: ../login.php");
-
-  }
 
 ?>
 
