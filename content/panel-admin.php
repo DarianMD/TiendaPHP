@@ -37,7 +37,7 @@
           while ($row = $resultado->fetch_assoc()){
             $usuario = $row["ID"];
 
-            $imagen = mostrarImagen_usr($usuario,1);
+            $imagen = mostrarImagen_panel($usuario,1);
 
 
             echo "<div class='carousel-cell'>

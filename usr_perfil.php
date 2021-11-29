@@ -29,15 +29,30 @@ $resultado = $conexion->query($usuario);
 
     <h1>Mi perfil</h1>
 
+
+
+
     <div class="usuario">
       <?php 
         
+
+        include ('/controllers/funciones/imagen.php');
+        
+
+
+
          if($resultado->num_rows > 0){
+    
+
           while ($row = $resultado->fetch_assoc()){
+            $id = $row["ID"];
+
+            $imagen = mostrarImagen_usr($id,1);
+  
             $ini = $row["USER"];
             $ini = substr($ini, 0,2);
             echo "<div class='carousel-cell'>
-            <img src='https://avatars.dicebear.com/api/initials/$ini.svg' width='100' height='100'>
+            <img src='$imagen' width='100' height='100'>
             <h2>Nombre Usuario</h2>
             <h1>".$row["USER"]."</h1>
             <h2>Contraseña</h2>
