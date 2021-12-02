@@ -10,9 +10,11 @@ html {
   
   body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #121212; /* fallback for old browsers */
-    overflow-x: hidden;
-  
+    background-image: url(/styles/assets/web/fondo2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     height: 100%;
   
     /* code to make all text unselectable */
@@ -35,7 +37,7 @@ html {
   /* ########################################################## */
   
   h1 {
-    color: white;
+    color: rgb(54, 54, 54);
   
     font-size: 35px;
     font-weight: 800;
@@ -53,7 +55,7 @@ html {
   
   .content-container {
     width: 500px;
-    height: 350px;
+    height: 450px;
   }
   
   .form-container {
@@ -62,7 +64,7 @@ html {
     align-items: center;
   
     width: 500px;
-    height: 350px;
+    height: 450px;
   
     margin-top: 5px;
     padding-top: 20px;
@@ -73,16 +75,32 @@ html {
     justify-content: center;
     flex-direction: column;
   
-    background: #1f1f1f;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199);
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   
   .subtitle {
     font-size: 11px;
   
-    color: rgba(177, 177, 177, 0.3);
+    color: rgba(0, 0, 0, 0.5);
+
+  }
+
+  a:link, a:visited, a:active{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    transition: 500ms;
   }
   
+a:hover{
+  font-size: 20px;
+}
+
   input {
     border: none;
     border-bottom: solid rgb(143, 143, 143) 1px;
@@ -104,17 +122,23 @@ html {
   
     box-shadow: 2px 2px 7px #38d39f70;
   
-    background: #38d39f;
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: rgba(255, 255, 255, 0.8);
   
-    width: 80px;
+    width: 100px;
   
-    transition: all 1s;
+    transition: all 500ms;
   }
   
   .submit-btn:hover {
     color: rgb(255, 255, 255);
-  
+    width: 115px;
+
     box-shadow: none;
   }
   

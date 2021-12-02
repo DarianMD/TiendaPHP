@@ -29,8 +29,8 @@
               <br>
               <input type="email" name="email" placeholder="E-MAIL" required  maxlength="35">
               <br>
-              <label for="img" class="subtitle">Select image:</label>
-              <input type="file" name="img_up">
+              <label for="img" class="submit-btn">Select image</label>
+              <input type="file" name="img_up" class="imagen" id="img">
               <br>
               <input type="submit" value="SUBMIT" class="submit-btn">
             </form>

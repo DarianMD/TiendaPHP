@@ -1,6 +1,6 @@
 <?php
+include ('../controllers/db.php');
 
-session_start();
 
 
 

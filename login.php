@@ -29,17 +29,19 @@ if(isset($_SESSION['nombre'])){
           </h1>
           <br>
           <br>
-          <span class="subtitle">USERNAME OR E-MAIL:</span>
+          <span class="subtitle"><b>SERNAME OR E-MAIL:</b></span>
           <br>
           <input type="text" name="username" value="">
           <br>
-          <span class="subtitle">PASSWORD:</span>
+          <span class="subtitle"><b>PASSWORD</b>:</span>
           <br>
           <input type="password" name="password" value="">
-          <br><br>
+          <br>
+          <span class="subtitle"><a href="./content/cont_rec_pass.php"><b>Restablecer contraseña</b></a>:</span>
+          <br>
+          <br>
           <input type="submit" value="SUBMIT" class="submit-btn">
           <br>
-          <span class="subtitle"><a href="./content/cont_rec_pass.php">Recuperar Contraseña</a>:</span>
 
         </form>
       </div>

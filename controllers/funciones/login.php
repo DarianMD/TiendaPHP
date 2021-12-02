@@ -47,8 +47,16 @@ function userExist($username,$password){
     $filas = mysqli_num_rows($resu);
 
     if($filas == 0){
-        echo "<script>alert('Error: usuario y/o clave incorrectos!!');</script>";
         session_destroy();
+        //header("Location: /login.php");
+        //echo "<script>alert('Error: usuario y/o clave incorrectos!!');</script>";
+
+
+        echo "<SCRIPT> //not showing me this
+        alert('Error: usuario y/o clave incorrectos!!')
+        window.location.replace('/login.php');
+    </SCRIPT>";
+
     }else{
  
         loginRol();

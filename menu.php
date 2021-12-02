@@ -32,6 +32,8 @@
 
         if(!isset($_SESSION['nombre'])){
           echo "<li><a href='/login.php'>Login</a></li>";
+          echo "<li><a href='/register.php'>Register</a></li>";
+
 
         }
        else{

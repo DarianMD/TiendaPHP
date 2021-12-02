@@ -1,7 +1,10 @@
 <?php
 include ('/controllers/db.php');
 
+include ('/controllers/funciones/sessiones.php');
+session_start();
 
+sessiones(1);
 
 $id = $_GET['id'];
 $producto="SELECT * from producto WHERE id = $id";
