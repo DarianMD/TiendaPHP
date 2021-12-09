@@ -24,13 +24,10 @@ $resultado = $conexion->query($usuario);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/styles/css/user_profile.css">
 </head>
 <body>
-
-    <h1>Mi perfil</h1>
-
-
-
+<section class="menu"><?php include ('menu.php');?></section>
 
     <div class="usuario">
       <?php 
@@ -52,7 +49,7 @@ $resultado = $conexion->query($usuario);
             $ini = $row["USER"];
             $ini = substr($ini, 0,2);
             echo "<div class='carousel-cell'>
-            <img src='$imagen' width='100' height='100'>
+            <img src='$imagen' class='imagen' width='100' height='100'>
             <h2>Nombre Usuario</h2>
             <h1>".$row["USER"]."</h1>
             <h2>Contraseña</h2>
@@ -70,7 +67,7 @@ $resultado = $conexion->query($usuario);
             
           }
         } 
-     ?>
+     ?> 
   </div>
      
 

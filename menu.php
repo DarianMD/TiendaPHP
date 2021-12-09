@@ -26,8 +26,10 @@
               <li class="active"><a href="/">Inicio</a></li>
               <?php
         
-        session_start();
-
+        if(!isset($_SESSION)) 
+        { 
+            session_start(); 
+        } 
        
 
         if(!isset($_SESSION['nombre'])){
@@ -51,7 +53,7 @@
           echo "<li><a href='/usr_compras.php?id=".$_SESSION["id"]."'>Mis Compras</a></li>";
           ;
           echo '<br>';
-          echo "<li><a href='/insert_gold.php?id=".$_SESSION["id"]."'>Mi Perfil</a></li>";
+          echo "<li><a href='/insert_gold.php?id=".$_SESSION["id"]."'>Insertar Dinero</a></li>";
 
           
           

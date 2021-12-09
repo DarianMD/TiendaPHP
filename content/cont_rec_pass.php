@@ -17,8 +17,7 @@ include ('../controllers/db.php');
     <link rel="stylesheet" href="./styles/css/login.css">
 </head>
 <body>
-  <div class="flex-container">
-    <div class="content-container">
+
       <div class="form-container">
         <form action="contr_rec_pass.php" method="POST">
           <h1>
@@ -39,7 +38,5 @@ include ('../controllers/db.php');
 
         </form>
       </div>
-    </div>
-  </div>
 </body>
 </html>

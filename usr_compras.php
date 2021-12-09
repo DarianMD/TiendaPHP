@@ -25,10 +25,14 @@ WHERE b.ID = '$id'");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/styles/css/usr_producto.css">
 </head>
 <body>
 
+<section class="menu"><?php include ('menu.php');?></section>
+
 <div class="productos">
+
   <div>
       <?php 
      

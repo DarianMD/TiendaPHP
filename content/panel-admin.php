@@ -28,7 +28,8 @@
 </head>
 <body>
 
-  
+<section class="menu"><?php include ('menu_admin.php');?></section>
+
   <button><a href="create_user.php">Crear Usuario</a></button>
   <div class="usuario">
       <?php 
