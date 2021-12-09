@@ -1,6 +1,5 @@
 <?php
 include ('../controllers/db.php');
-include ('../menu.php');
 include ('../controllers/funciones/include_funciones.php');
 
 

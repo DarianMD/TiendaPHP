@@ -2,8 +2,11 @@
 
 
 function sessiones($tipo){
-  session_start();
-  $_SESSION["rol"];
+  if(!isset($_SESSION)) 
+  { 
+      session_start(); 
+  } 
+    $_SESSION["rol"];
 
   if($tipo == 1) {
     if(!isset($_SESSION['nombre'])){

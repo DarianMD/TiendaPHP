@@ -1,6 +1,8 @@
 <?php
   include ('../controllers/db.php');
   include ('../controllers/funciones/include_funciones.php');
+  include ('../menu.php');
+
   $producto="SELECT * from producto";
   $result = $conexion->query($producto);
 
@@ -28,9 +30,8 @@
 </head>
 <body>
 
-<section class="menu"><?php include ('menu_admin.php');?></section>
 
-  <button><a href="create_user.php">Crear Usuario</a></button>
+  <button class="cr_usr"><a href="create_user.php">Crear Usuario</a></button>
   <div class="usuario">
       <?php 
         
@@ -41,7 +42,7 @@
             $imagen = mostrarImagen_panel($usuario,1);
 
 
-            echo "<div class='carousel-cell'>
+            echo "<div class='usuario-dat'>
             <img src='$imagen' width='100' height='100'>
             <h1>".$row["ID"]."</h1>
             <h1>".$row["USER"]."</h1>
@@ -59,7 +60,7 @@
   </div>
     
 
-  <button><a href="create_product.php">Crear Producto</a></button>
+  <button class="cr_pr"><a href="create_product.php">Crear Producto</a></button>
 
 
   <div class="producto">
@@ -71,7 +72,7 @@
             $imagen = mostrarImagen_panel($id,2);
 
 
-            echo "<div class='carousel-cell'>
+            echo "<div class='producto-dat'>
             <img src='$imagen' width='100' height='100'>
             <h1>".$row["nom_product"]."</h1>
             <p>".$row["desc_product"]."</p>

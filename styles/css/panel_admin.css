@@ -1,10 +1,78 @@
-.usuario{
-    display: flex;
-    flex-wrap: wrap;
+body{
 
+    background-image: url(/styles/assets/web/usr_perfil.jpg);
+    background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+ 
+}
+.usuario-dat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2rem 2.5rem;
+    margin-top: 25px;
+    background:rgba(128, 128, 128, 0.4);;
+    -webkit-box-shadow: -7px 15px 15px 5px #000000;
+    box-shadow: -7px 15px 15px 5px #696969;  backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 1000px;
+    font-size: 15px;
+    margin-left: 300px;
 }
 
-.producto{
+
+
+.producto-dat{
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1rem 2.5rem;
+    margin-top: 50px;
+    background:rgba(128, 128, 128, 0.4);;
+    -webkit-box-shadow: -7px 15px 15px 5px #000000;
+    box-shadow: -7px 15px 15px 5px #696969;  backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 450px;
+    font-size: 15px;
+    margin-left: 700px;
+}
+
+
+.cr_usr{
+    cursor: pointer;
+
+    border: none;
+    border-radius: 8px;
+  
+    box-shadow: 2px 2px 7px #38d39f70;
+  
+    background: #38d39f;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    width: 200px;
+    height: 70px;
+}
+
+.cr_pr{
+    cursor: pointer;
+
+    border: none;
+    border-radius: 8px;
+  
+    box-shadow: 2px 2px 7px #38d39f70;
+  
+    background: #38d39f;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    width: 200px;
+    height: 70px;
+
 }
