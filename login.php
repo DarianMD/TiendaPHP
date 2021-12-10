@@ -29,7 +29,7 @@ if(isset($_SESSION['nombre'])){
           </h1>
           <br>
           <br>
-          <span class="subtitle"><b>SERNAME OR E-MAIL:</b></span>
+          <span class="subtitle"><b>E-MAIL:</b></span>
           <br>
           <input type="text" name="username" value="">
           <br>

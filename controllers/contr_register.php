@@ -63,12 +63,31 @@ $result = $conexion->query($usuar_sel);
 
     if($conexion){
 
-        $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'null',null,'$rol',0)";
+        $resu = mysqli_query($conexion, "SELECT * FROM usuario WHERE USER = '$user'");
+        $filas = mysqli_num_rows($resu);
+
+        if($filas > 0){
+          
+    
+            echo "<SCRIPT> //not showing me this
+            alert('El usuario ya existe')
+            window.location.replace('/register.php');
+        </SCRIPT>";
+    
+        
+        }
+        else{
+            $sql="INSERT INTO `daw2`.`usuario` VALUES ('$id','$user', '$hashed_password', '$email', sysdate(), sysdate(),'null',null,'$rol',0)";
          $consulta=mysqli_query($conexion,$sql);
 
          subirImagen(1,$tmp_name,$name,$id,$conexion);
          
-         echo "Registro realizado correctamente"; 
+         echo "Registro realizado correctamente";
+         header("Location: ../login.php");
+ 
+        }
+
+     
      
       
      

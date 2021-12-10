@@ -13,12 +13,16 @@ if(isset($_POST['dinero'])) {
 $long = strlen($dinero);
 
 if($long > 3){
-    echo "<script>alert('Error: usuario y/o clave incorrectos!!');</script>";
+    echo "<script>alert('No se permite más de 999€);</script>";
 
 }
 else{
     $money_sel="UPDATE usuario SET MONEY =  MONEY + $dinero WHERE ID = '$id' ";
     $money_ins=mysqli_query($conexion,$money_sel);
+    echo "<SCRIPT> //not showing me this
+    alert('Cantidad Ingresada')
+    window.location.replace('/index.php');
+</SCRIPT>";
 
 }
 
