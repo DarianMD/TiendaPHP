@@ -56,12 +56,21 @@ if($result->num_rows > 0){
 
     </form>
       <?php 
-        
+        include ('/controllers/funciones/imagen.php');
 
+        $id = $ident;
+
+        $imagen = mostrarImagen_usr($id,2);
+
+        $ini = $nombre;
+        $ini = substr($ini, 0,2);
+        
             echo "<div class='carousel-cell'>
             <h1>".$nombre."</h1>
             <p>".$desc."</p>
             <p>".$precio."</p>
+            <img src='$imagen' class='imagen' width='200' height='200'>
+
             <a href='/content/contr_compr.php?id=".$ident."'>Comprar</a>
             <br>
             </div>";

@@ -22,14 +22,23 @@
   <div class="productos">
   <div class="main-carousel" data-flickity='{ "cellAlign": "left","freeScroll": true ,"wrapAround": true, "contain": true, "autoPlay": 2500,"pauseAutoPlayOnHover": false }'>
       <?php 
-        
+                include ('/controllers/funciones/imagen.php');
+
          if($result->num_rows > 0){
           while ($row = $result->fetch_assoc()){
             
+            $id = $row["id"];
+
+            $imagen = mostrarImagen_usr($id,2);
+  
+            $ini = $row["nom_product"];
+            $ini = substr($ini, 0,2);
+
             echo "<div class='carousel-cell'>
             <h1>".$row["nom_product"]."</h1>
             <p>".$row["desc_product"]."</p>
             <p>".$row["precio"]." €</p>
+            <img src='$imagen' class='imagen' width='200' height='200'>
             <a href='logica.php?id=".$row["id"]."'>Comprar</a>
             <br>
             </div>";
