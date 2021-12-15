@@ -1,7 +1,6 @@
 <?php
   include ('../controllers/db.php');
   include ('../controllers/funciones/include_funciones.php');
-  include ('../menu.php');
 
   $producto="SELECT * from producto";
   $result = $conexion->query($producto);
@@ -30,8 +29,8 @@
 </head>
 <body>
 
+  <section><?php include ('menu_admin.php');?></section>
 
-  <button class="cr_usr"><a href="create_user.php">Crear Usuario</a></button>
   <div class="usuario">
       <?php 
         
@@ -60,7 +59,6 @@
   </div>
     
 
-  <button class="cr_pr"><a href="create_product.php">Crear Producto</a></button>
 
 
   <div class="producto">
