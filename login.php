@@ -38,6 +38,8 @@ if(isset($_SESSION['nombre'])){
           <input type="password" name="password" value="">
           <br>
           <span class="subtitle"><a href="./content/cont_rec_pass.php"><b>Restablecer contraseña</b></a>:</span>
+          <span class="subtitle"><a href="./index.php"><b>Inicio</b></a>:</span>
+
           <br>
           <br>
           <input type="submit" value="SUBMIT" class="submit-btn">

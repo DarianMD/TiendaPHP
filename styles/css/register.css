@@ -137,3 +137,20 @@ input {
   display: none;
 }
 
+.subtitle {
+  font-size: 11px;
+
+  color: rgba(0, 0, 0, 0.5);
+
+}
+
+a:link, a:visited, a:active{
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  transition: 500ms;
+}
+
+a:hover{
+font-size: 20px;
+}

@@ -32,6 +32,8 @@
               <label for="img" class="submit-btn">Select image</label>
               <input type="file" name="img_up" class="imagen" id="img">
               <br>
+              <span class="subtitle"><a href="./index.php"><b>Inicio</b></a>:</span>
+
               <input type="submit" value="SUBMIT" class="submit-btn">
             </form>
           </div>

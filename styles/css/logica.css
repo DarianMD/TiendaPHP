@@ -1,0 +1,36 @@
+body{
+
+    background-image: url(/styles/assets/web/fondo2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+ 
+
+}
+
+.productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 2.5rem;
+    margin-top: 50px;
+    width: 100%; /* full width */
+    height: 400px; /* height of carousel */
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 450px;
+    font-size: 25px;
+    margin-left: 700px;
+}
+

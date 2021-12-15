@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/css/insert_gold.css">
+    <link rel="stylesheet" href="./styles/css/insert_golds.css">
 </head>
-<body>
+<body style="  background-image: url(/styles/assets/web/fondo2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;">
 <section class="menu"><?php include ('menu.php');?></section>
 
     <form action="/controllers/contr_ins_gold.php" method="POST">
