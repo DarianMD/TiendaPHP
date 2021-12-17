@@ -37,24 +37,43 @@ while($row = mysqli_fetch_assoc($sql)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/styles/css/edit_user.css">
 </head>
 <body>
 
-    <h1>Producto</h1>
+<section><?php include ('menu_admin.php');?></section>
 
- 
-      <form action="contr_usr_crud.php" method="POST" enctype="multipart/form-data">
+      <div class="flex-container">
+    <div class="content-container">
+      <div class="form-container">
+        <form action="/controllers/contr_login.php" method="POST">
+          <h1>
+            Edit User
+          </h1>
+          <br>
+          <br>
+          <form action="contr_usr_crud.php" method="POST" enctype="multipart/form-data">
+              <h3 class="subtitle">ID</h3>
               <input type="text" name="id" readonly value="<?php echo $id;?>">
+              <h3 class="subtitle">Nombre Usuario</h3>
               <input type="text" name="nombre" value="<?php echo $nombre;?>">
+              <h3 class="subtitle">Contraseña</h3>
               <input type="text" name="contra" value="<?php echo $contra;?>">
+              <h3 class="subtitle">E-MAIL</h3>
               <input type="text" name="email" value="<?php echo $email;?>">
+              <h3 class="subtitle">Rol</h3>
               <input type="text" name="rol" value="<?php echo $rol;?>">
+              <br>
               <label for="img" class="subtitle">Select image:</label>
               <input type="file" name="img_up">
               <input type="submit" value="SUBMIT" class="submit-btn">
             </form>
 
-    
-    
+        </form>
+      </div>
+    </div>
+  </div>
+
+
 </body>
 </html>

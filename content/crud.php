@@ -39,17 +39,28 @@ if($result->num_rows > 0){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/styles/css/edit_product.css">
 </head>
 <body>
+    <section><?php include ('menu_admin.php');?></section>
 
-    <h1>Producto</h1>
-
- 
-      <form action="contr_crud.php" method="POST" enctype="multipart/form-data">
-                <img src="" alt="">
+<div class="flex-container">
+<div class="content-container">
+<div class="form-container">
+  <form action="/controllers/contr_login.php" method="POST">
+    <h1>
+      Edit Product
+    </h1>
+    <br>
+    <br>
+    <form action="contr_crud.php" method="POST" enctype="multipart/form-data">
+              <h3 class="subtitle">ID</h3>
               <input type="" name="id" readonly value="<?php echo $id;?>">
+              <h3 class="subtitle">Nombre producto</h3>
               <input type="text" name="nombre" value="<?php echo $nombre;?>">
+              <h3 class="subtitle">Descripción</h3>
               <input type="text" name="descripcion" value="<?php echo $desc;?>">
+              <h3 class="subtitle">Precio</h3>
               <input type="number" name="precio" value="<?php echo $precio;?>">
               <br>
               <label for="img" class="subtitle">Select image:</label>
@@ -57,7 +68,14 @@ if($result->num_rows > 0){
               <input type="submit" value="SUBMIT" class="submit-btn">
             </form>
 
-    
-    
+  </form>
+</div>
+</div>
+</div>
+
+
+
+
+
 </body>
 </html>
