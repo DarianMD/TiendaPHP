@@ -46,7 +46,6 @@ while($row = mysqli_fetch_assoc($sql)){
       <div class="flex-container">
     <div class="content-container">
       <div class="form-container">
-        <form action="/controllers/contr_login.php" method="POST">
           <h1>
             Edit User
           </h1>
@@ -69,7 +68,6 @@ while($row = mysqli_fetch_assoc($sql)){
               <input type="submit" value="SUBMIT" class="submit-btn">
             </form>
 
-        </form>
       </div>
     </div>
   </div>

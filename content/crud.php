@@ -47,7 +47,6 @@ if($result->num_rows > 0){
 <div class="flex-container">
 <div class="content-container">
 <div class="form-container">
-  <form action="/controllers/contr_login.php" method="POST">
     <h1>
       Edit Product
     </h1>
@@ -68,7 +67,6 @@ if($result->num_rows > 0){
               <input type="submit" value="SUBMIT" class="submit-btn">
             </form>
 
-  </form>
 </div>
 </div>
 </div>

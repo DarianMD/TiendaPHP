@@ -48,6 +48,7 @@ if($conexion){
          subirImagen(2,$tmp_name,$name,$ident,$conexion);
 }
 
+header("Location: panel-admin.php");
 
 
 ?>
